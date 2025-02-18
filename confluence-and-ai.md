@@ -88,6 +88,8 @@ User Adoption: Encouraging adoption might require demonstrations or training ses
 These cases illustrate how integrating Confluence with GitHub Copilot Chat can make documentation a more dynamic, interactive, and integral part of the development process, enhancing both productivity and knowledge sharing.
 
 ===================
+### Prompt:
+I want to develop a Vscode Copilot Chat extension, please give me some integration idea about Confluence with GitHub copilot chat.
 
 Integrating a Visual Studio Code (VS Code) Copilot Chat extension with Confluence can enhance productivity by providing developers with direct access to documentation, project details, or team knowledge within the development environment. Here are some integration ideas:
 
