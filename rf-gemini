@@ -102,3 +102,39 @@ END-IF
   * **Security:** Never upload proprietary code to a public LLM (like free ChatGPT) unless your company policy allows it. Use "Enterprise" versions or run local LLMs (like Llama 3) for privacy.
 
 ### Would you like me to help you design a specific prompt for your first batch of code, or would you like to discuss tools for indexing your codebase (RAG)?
+
+
+``` mermaid
+graph LR
+    subgraph Inputs [Triangulation Inputs]
+        A[Outdated IT System<br>(Obscure Language)] --> B(Source Code<br>Logic);
+        A --> C(Database Schema<br>Memory);
+        A --> D(UI / Logs<br>Behavior);
+    end
+
+    subgraph Prep [Phase 2: Preparation]
+        B & C & D --> E{Sanitize &<br>Chunk Data};
+    end
+
+    subgraph LLM_Core [LLM Processing Core]
+        E --> F[LLM<br>(AI Analyst / Translator)];
+        F -- Prompt: DB Structure --> G(Analyze<br>Database First);
+        F -- Prompt: Code Snippets --> H(Analyze<br>Obscure Code);
+        F -- Prompt: Screen Text --> I(Analyze<br>UI/Inputs);
+        G & H & I --> J{Synthesize &<br>Draft Stories};
+    end
+
+    subgraph Output_Loop [Validation & Output]
+        J --> K[Initial User Stories<br>& Business Logic];
+        K --> L{Review & Validate<br>(Human Expert Loop)};
+        L -- Hallucination / Too Technical --> M[Refine Prompt /<br>Add RAG Context];
+        M --> F;
+        L -- Accurate Business Value --> N((Final<br>User Story Backlog));
+    end
+
+    style A fill:#f9d5e5,stroke:#333,stroke-width:2px
+    style E fill:#e1d5f9,stroke:#333,stroke-width:1px
+    style F fill:#d5e8f9,stroke:#005b96,stroke-width:2px,color:#005b96
+    style L fill:#f9f7d5,stroke:#d4a017,stroke-width:2px
+    style N fill:#d5f9e1,stroke:#2e7d32,stroke-width:2px,color:#2e7d32
+```
