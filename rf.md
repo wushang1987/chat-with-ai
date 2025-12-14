@@ -125,3 +125,48 @@ Below, I'll outline a structured approach to achieve this. This combines manual 
    - **Modernization Bonus**: Once stories are extracted, use them to spec a rewrite in a popular language.
 
 If you provide more details (e.g., the specific language, system domain, or code samples), I can refine this further or demo a prompt.
+
+
+``` mermaid
+flowchart TD
+    A[Start: Outdated IT System in Obscure Language] --> B{Goal: Understand All User Stories}
+
+    B --> C[1. Preparation: Gather and Organize Artifacts]
+    C --> C1[Inventory codebase]
+    C --> C2[Collect documentation]
+    C --> C3[Observe runtime behavior]
+    C --> C4[Identify language specifics]
+    C --> C5[Break into modules]
+
+    C --> D[2. Manual High-Level Review]
+    D --> D1[Skim code for entry points]
+    D --> D2[Identify patterns]
+    D --> D3[Interview stakeholders]
+    D --> D4[Estimate scope]
+
+    D --> E[3. Using LLM to Analyze and Extract User Stories]
+    E --> E1[Setup LLM Environment]
+    E --> E2[Chunk and Feed Code/Docs]
+    E2 --> E2a[Prompt for Code Explanation]
+    E2 --> E2b[Prompt for Translation]
+    E --> E3[Infer and Generate User Stories]
+    E --> E4[Handle Documentation]
+    E --> E5[Validate with Runtime Data]
+    E --> E6[Consolidate All Stories]
+    E --> E7[Address Obscure Language Limitations]
+
+    E --> F[4. Validation and Iteration]
+    F --> F1[Cross-Check with stakeholders/system runs]
+    F --> F2[Gap Analysis]
+    F --> F3[Test Coverage]
+    F --> F4[Iterate on prompts]
+
+    F --> G[5. Outcomes and Next Steps]
+    G --> G1[Comprehensive User Stories List]
+    G --> G2[Ready for Modernization]
+    G --> G3[Risks and Mitigations]
+
+    style A fill:#f9f,stroke:#333
+    style G fill:#f9f,stroke:#333
+
+```
